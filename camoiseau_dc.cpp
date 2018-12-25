@@ -2,10 +2,6 @@
  * 
  */
 
-/*
- * $Id: camoiseau_dc.cpp 21 2017-10-30 01:54:47Z clement $
- */
-
 #include "camoiseau_dc.h"
 
 #define AVIOFFSET 240
@@ -214,4 +210,3 @@ void exitCameraLowPowerMode() {
   
   camera.clear_bit(ARDUCHIP_GPIO,GPIO_PWDN_MASK);
 }
-

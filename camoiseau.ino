@@ -1,12 +1,8 @@
 /*CAMOISEAU A bird camera
 
    Compiled using:
- *  * Arduino IDE 1.8.5
+ *  * Arduino IDE 1.8.8
  *  * Arduino AVRBoard 1.6.21
- */
-
-/*
- *  $Id: camoiseau.ino 25 2018-04-30 01:01:19Z clement $
  */
 
 /*
@@ -166,4 +162,3 @@ void wakeUp() {
 
   // Nothing to do.
 }
-

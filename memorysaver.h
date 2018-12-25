@@ -1,7 +1,3 @@
-/*
- *  $Id: memorysaver.h 3 2017-07-08 22:26:34Z clement $
- */
-
 #ifndef _MEMORYSAVER_
 #define _MEMORYSAVER_
 

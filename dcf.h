@@ -2,10 +2,6 @@
  * 
  */
 
-/*
- *  $Id: dcf.h 3 2017-07-08 22:26:34Z clement $
- */
-
 #ifndef _DCF_
 #define _DCF_
 

@@ -2,10 +2,6 @@
  * 
  */
 
-/*
- * $Id: camoiseau_modeSwitcher.h 22 2017-11-12 02:39:24Z clement $
- */
-
 #ifndef _CAMOISEAU_MODESWITCHER_
 #define _CAMOISEAU_MODESWITCHER_
 

@@ -1,7 +1,3 @@
-/*
- * $Id: camoiseau_dc.h 21 2017-10-30 01:54:47Z clement $
- */
-
 #ifndef _CAMOISEAU_DC_
 #define _CAMOISEAU_DC_
 

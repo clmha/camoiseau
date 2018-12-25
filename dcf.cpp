@@ -2,10 +2,6 @@
  * 
  */
 
-/*
- *  $Id: dcf.cpp 3 2017-07-08 22:26:34Z clement $
- */
-
 /* TODO Check Capture Count Against Maximum of Captures Supported in DCF
  * 
  */
@@ -36,4 +32,3 @@ void getDcfFilePath(unsigned long iCapture, const char *ext, char *path) {
   getDcfFileBaseName(iCapture, fileBaseName);
   sprintf(path, "%s/%s%s", dirPath, fileBaseName, ext);
 }
-

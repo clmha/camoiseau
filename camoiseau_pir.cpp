@@ -2,10 +2,6 @@
  * 
  */
 
- /*
-  * $Id: camoiseau_pir.cpp 24 2017-11-19 21:03:40Z clement $
-  */
-
 #include "camoiseau_pir.h"
 
 void initializePirSensor() {
