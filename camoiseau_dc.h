@@ -29,7 +29,5 @@ int getCaptureSize();
 void setCaptureSize(int size);
 const int* getCaptureSizes();
 int findCaptureSize(int size);
-void enterCameraLowPowerMode();
-void exitCameraLowPowerMode();
 
 #endif

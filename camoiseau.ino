@@ -14,7 +14,6 @@
 #include <SPI.h>
 #include <SD.h>
 #include <Wire.h>
-#include <avr/sleep.h>
 
 #include "camoiseau_dc.h"
 #include "camoiseau_modeSwitcher.h"
@@ -40,13 +39,6 @@ void setup() {
   // Signal the Start of Initialization
   pinMode(CAMOISEAU_LED_DPIN, OUTPUT);
   digitalWrite(CAMOISEAU_LED_DPIN, HIGH);
-
-  /*
-   * System
-   */
-  Serial.print("SYS CONF... ");
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  Serial.print("DONE.\n");
 
   /*
    *  I2C Bus
@@ -119,7 +111,6 @@ void loop() {
       char dcfFilePath[DCF_FILEPATH_LENGTH];
 
       digitalWrite(CAMOISEAU_LED_DPIN, HIGH);
-      exitCameraLowPowerMode();
   
       // File name construction
       getDcfDirectoryPath(iCapture, dcfFilePath);
@@ -136,11 +127,6 @@ void loop() {
     case monitor:
       // Switch to MONITOR mode
       digitalWrite(CAMOISEAU_LED_DPIN, LOW);
-      enterCameraLowPowerMode();
-      
-      attachInterrupt(digitalPinToInterrupt(CAMOISEAU_PIR_DPIN), wakeUp, RISING);
-      sleep_mode();
-      detachInterrupt(CAMOISEAU_PIR_DPIN);
       break;
     }
 
@@ -155,10 +141,4 @@ void getDateTime(uint16_t *date, uint16_t *time) {
 
   *date = FAT_DATE(RTC.now().year(), RTC.now().month(), RTC.now().day());
   *time = FAT_TIME(RTC.now().hour(), RTC.now().minute(), RTC.now().second());
-}
-
-void wakeUp() {
-  //WAKEUP Wakes-up the system
-
-  // Nothing to do.
 }

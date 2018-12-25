@@ -64,7 +64,6 @@ int initializeCamera() {
       delay(pause_ms);
     }
   } while (tmp != 0x55);
-  exitCameraLowPowerMode(); // In case it was sleeping before initialization
 
   // Check camera module type
   while (1) {
@@ -197,16 +196,4 @@ int findCaptureSize(int size) {
   }
 
   return -1;
-}
-
-void enterCameraLowPowerMode() {
-  //ENTERCAMERALOWPOWERMODE Enter Camera's Low-Power Mode
-  
-  camera.set_bit(ARDUCHIP_GPIO,GPIO_PWDN_MASK);
-}
-
-void exitCameraLowPowerMode() {
-  //EXITCAMERALOWPOWERMODE Exit Camera's Low-Power Mode
-  
-  camera.clear_bit(ARDUCHIP_GPIO,GPIO_PWDN_MASK);
 }
