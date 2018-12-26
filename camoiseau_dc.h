@@ -1,7 +1,7 @@
 #ifndef _CAMOISEAU_DC_
 #define _CAMOISEAU_DC_
 
-#include <ArduCAM.h>
+#include "ArduCAM/ArduCAM.h"
 #include <SD.h>
 #include <SPI.h>
 

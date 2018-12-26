@@ -1,15 +1,12 @@
 /*CAMOISEAU A bird camera
-
-   Compiled using:
- *  * Arduino IDE 1.8.8
- *  * Arduino AVRBoard 1.6.21
+ *
  */
 
 /*
  * TODO Store Capture Count in Non-volatile Memory
  */
 
-#include <ArduCAM.h>
+#include <Arduino.h>
 #include <RTClib.h>
 #include <SPI.h>
 #include <SD.h>
@@ -29,6 +26,15 @@ RTC_DS1307 RTC;
 camoiseauMode currentMode = monitor;
 
 unsigned long iCapture = 0;
+
+/*
+ * Function Prototypes
+ */
+void getDateTime(uint16_t *date, uint16_t *time);
+
+/*
+ * Function Definitions
+ */
 
 void setup() {
   //SETUP Code to run once
